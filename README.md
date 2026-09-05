@@ -1,4 +1,4 @@
-##甲骨
+# 甲骨
 import jiagu
 <<<<<<< Updated upstream
 
@@ -11,7 +11,8 @@ ner = jiagu.ner(words)  # 命名实体识别
 print('‘全国绿化委员会’的实体名称识别：'+ '/'.join(ner))
 >>>>>>>
 import jiagu
-# jiagu.init() # 可手动初始化，也可以动态初始化
+# jiagu.init() 
+# 可手动初始化，也可以动态初始化
 text = '苏州的天气不错'
 words = jiagu.cut(text)  # 分词
 print('‘苏州的天气不错’的分词结果：'+ '/'.join(words))
@@ -23,7 +24,8 @@ print('‘苏州的天气不错’的实体名称识别：'+ '/'.join(ner))
 text = '丹妮莉丝坦格利安疯了'
 words = jiagu.seg(text)
 print('‘丹妮莉丝坦格利安疯了’的默认分词结果：'+ '/'.join(words))
-# jiagu.load_userdict('dict/user.dict') # 加载自定义字典，支持字典路径、字典列表形式。
+# jiagu.load_userdict('dict/user.dict') 
+# 加载自定义字典，支持字典路径、字典列表形式。
 jiagu.load_userdict(['丹妮莉丝坦格利安'])
 words = jiagu.seg(text)
 print('经过用户自定义词语后，‘丹妮莉丝坦格利安疯了’的分词结果：'+ '/'.join(words))
@@ -38,7 +40,8 @@ keywords = jiagu.keywords(text, 5)  # 关键词抽取
 print('关键词抽取：'+ '/'.join(keywords))
 summarize = jiagu.summarize(text, 3)  # 文本摘要
 print('文本摘要：'+ '/'.join(summarize))
-# jiagu.findword('input.txt', 'output.txt') # 根据大规模语料，利用信息熵做新词发现。
+# jiagu.findword('input.txt', 'output.txt') 
+# 根据大规模语料，利用信息熵做新词发现。
 # 知识图谱关系抽取
 text = '姚明1980年9月12日出生于上海市徐汇区，祖籍江苏省苏州市吴江区震泽镇，前中国职业篮球运动员，司职中锋，现任中职联公司董事长兼总经理。'
 knowledge = jiagu.knowledge(text)
@@ -62,7 +65,7 @@ cluster = jiagu.text_cluster(docs)
 print(cluster)
 
 
-##结巴
+# 结巴
 # encoding=utf-8
 import jieba
 jieba.initialize()  # 手动初始化jieba资源，提高分词效率。
