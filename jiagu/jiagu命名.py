@@ -1,4 +1,5 @@
 import jiagu
+
 text = '全国绿化委员会'
 words = jiagu.cut(text)  # 分词
 print('‘全国绿化委员会’的分词结果：'+ '/'.join(words))
